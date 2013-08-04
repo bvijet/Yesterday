@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_background">
+    
+	<RelativeLayout 
+	    android:id="@+id/pickContactSection"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content">
+	    
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_marginLeft="@dimen/pick_contact_button_left_margin"
+	        android:layout_marginTop="3dp">
+		    <ImageButton 
+		        android:id="@+id/pick_contact_image_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/ic_pick_contact"
+		        android:contentDescription="@string/image_content_desc"/>
+		    <TextView 
+		        android:id="@+id/label_pick_contact"
+		        android:layout_width="fill_parent"
+		        android:layout_height="match_parent"
+		        android:text="@string/label_pick_contact"
+		        android:layout_gravity="center"
+		        android:gravity="center"/>
+	    </LinearLayout>
+	</RelativeLayout>
+	
+	<RelativeLayout 
+	    android:id="@+id/connectedUserSection"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/pickContactSection"
+	    android:layout_margin="4dp"
+	    android:background="#567890">
+	    
+	    <QuickContactBadge
+                android:id="@+id/connected_user_profile_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_margin="4dip"
+                android:src="@drawable/ic_default_profile"
+                android:layout_centerVertical="true"/>	    
+	    
+	    <LinearLayout 
+	        android:id="@+id/connected_user_desc"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_toRightOf="@+id/connected_user_profile_icon"
+	        android:layout_margin="@dimen/connected_user_margin">
+	        
+	        <TextView 
+	            android:id="@+id/connected_user_name"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="Vijet"/>
+	        
+	        <TextView 
+	            android:id="@+id/connected_user_address"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:minLines="3"
+	            android:maxLines="4"
+	            android:text="80 feet Main Road, KHB Games Village, Koromangala, Bangalore"/>
+	        
+	        <TextView 
+	            android:id="@+id/connected_user_status"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="waiting to connect"/>
+	    </LinearLayout>
+	</RelativeLayout>
+	
+	<RelativeLayout 
+	    android:id="@+id/connectingUserSection"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/connectedUserSection"
+	    android:layout_margin="4dip">
+	    
+	    <TextView 
+	            android:id="@+id/connecting_user_address"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:minLines="3"
+	            android:maxLines="4"
+	            android:text="80 feet Main Road, KHB Games Village, Koromangala, Bangalore"/>
+	    
+	</RelativeLayout>
+</RelativeLayout>
